@@ -1,0 +1,13 @@
+💎 Hello Supreme Watch Team!
+
+I came across this beautiful timepiece on your Luxy Store website and I'd love to place an order! ⌚✨
+
+📝 Product Details:
+━━━━━━━━━━━━━━
+🕰️ Name: {product_name}
+💰 Price: ₹{price}
+🔢 Quantity: {quantity}
+━━━━━━━━━━━━━━
+
+📦 Request:
+Kindly confirm the availability and assist me with the next steps to complete my order. I'm excited to shop with you! 🛍️ 

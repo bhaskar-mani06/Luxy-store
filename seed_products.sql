@@ -1,0 +1,15 @@
+-- Insert sample products
+INSERT INTO products (name, description, price, original_price, category, image_url, featured, is_new, on_sale, discount, rating)
+VALUES
+  ('Elite Chronograph Men''s Watch', 'A premium timepiece featuring Swiss movement and sapphire crystal.', 1299.99, 1999.99, 'mens-watch', 'https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg', true, false, true, 35, 4.8),
+  ('Aviator Polarized Sunglasses', 'Classic aviator design with 100% UV protection and polarized lenses.', 299.99, 499.99, 'sunglasses', 'https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg', false, false, true, 40, 4.6),
+  ('Diamond Encrusted Ladies Watch', 'Elegant timepiece with genuine diamond accents and mother of pearl dial.', 2499.99, 2999.99, 'ladies-watch', 'https://images.pexels.com/photos/277390/pexels-photo-277390.jpeg', true, false, true, 17, 4.9),
+  ('Pro Wireless Earbuds', 'Premium true wireless earbuds with active noise cancellation.', 249.99, null, 'airpods', 'https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg', false, true, false, 0, 4.7),
+  ('Smart Watch Series 7', 'Advanced smartwatch with health monitoring and cellular connectivity.', 499.99, null, 'iwatch', 'https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg', false, true, false, 0, 4.5),
+  ('Italian Leather Bifold Wallet', 'Handcrafted from premium Italian leather with RFID protection.', 199.99, 299.99, 'wallet', 'https://images.pexels.com/photos/2346006/pexels-photo-2346006.jpeg', false, false, true, 33, 4.6),
+  ('Designer Leather Belt', 'Luxury belt made from full-grain leather with signature buckle.', 349.99, null, 'belts', 'https://images.pexels.com/photos/45055/pexels-photo-45055.jpeg', false, false, false, 0, 4.4),
+  ('Oversized Cat Eye Sunglasses', 'Elegant oversized frames with gradient lenses and UV protection.', 279.99, 329.99, 'ladies-sunglasses', 'https://images.pexels.com/photos/701877/pexels-photo-701877.jpeg', false, false, true, 15, 4.3),
+  ('Signature Unisex Fragrance', 'Exclusive fragrance with notes of bergamot, jasmine, and sandalwood.', 199.99, 249.99, 'unisex-perfume', 'https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg', false, false, true, 20, 4.8),
+  ('Premium Gift Set: Wallet & Belt', 'Luxury matching wallet and belt set in premium leather.', 449.99, 499.99, 'wallets-belts', 'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg', false, false, true, 10, 4.7),
+  ('Automatic Buckle Leather Belt', 'Premium leather belt with automatic sliding buckle mechanism.', 299.99, null, 'belt', 'https://images.pexels.com/photos/45055/pexels-photo-45055.jpeg', false, false, false, 0, 4.5),
+  ('Luxury Fragrance Collection', 'Set of three signature fragrances in elegant bottles.', 499.99, 699.99, 'fragrance-gift-set', 'https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg', true, false, true, 29, 4.9); 

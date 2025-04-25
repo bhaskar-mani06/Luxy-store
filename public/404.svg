@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="400" fill="#f8f9fa"/>
+    
+    <!-- 404 Text -->
+    <text x="400" y="180" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="#343a40" text-anchor="middle">404</text>
+    
+    <!-- Error Message -->
+    <text x="400" y="240" font-family="Arial, sans-serif" font-size="24" fill="#6c757d" text-anchor="middle">Page Not Found</text>
+    
+    <!-- Decorative Elements -->
+    <circle cx="200" cy="100" r="20" fill="#007bff" opacity="0.1"/>
+    <circle cx="600" cy="300" r="30" fill="#007bff" opacity="0.1"/>
+    <circle cx="700" cy="150" r="15" fill="#007bff" opacity="0.1"/>
+    <circle cx="100" cy="250" r="25" fill="#007bff" opacity="0.1"/>
+</svg> 
