@@ -19,15 +19,30 @@ const Header: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
+      if (window.scrollY < 50) {
+        setIsNavbarVisible(true);
+        setLastScrollY(window.scrollY);
+        return;
+      }
+      if (window.scrollY > lastScrollY) {
+        // Scrolling down
+        setIsNavbarVisible(false);
+      } else {
+        // Scrolling up
+        setIsNavbarVisible(true);
+      }
+      setLastScrollY(window.scrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
@@ -150,7 +165,8 @@ const Header: React.FC = () => {
         isScrolled
           ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md'
           : 'bg-transparent'
-      }`}
+      } ${isNavbarVisible ? 'top-0' : '-top-24'}`}
+      style={{ transition: 'top 0.3s' }}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
