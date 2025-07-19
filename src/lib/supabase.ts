@@ -934,4 +934,53 @@ export const fixAllProductCategories = async () => {
   } catch (error) {
     console.error('Error fixing product categories:', error);
   }
+};
+
+export const fetchSimilarProducts = async (currentProductId: string, category: string, limit: number = 4): Promise<Product[]> => {
+  try {
+    // Fetch products with their images
+    const { data, error } = await supabase
+      .from('products')
+      .select(`*, product_images (id, image_url, is_primary)`)
+      .eq('category', category)
+      .neq('id', currentProductId)
+      .limit(limit)
+      .order('created_at', { ascending: false });
+
+    if (error) throw error;
+    if (!data) return [];
+
+    // Transform to always have a valid imageUrl
+    return data.map((product: any) => {
+      let imageUrl = product.product_images?.find((img: any) => img.is_primary)?.image_url;
+      if (!imageUrl && product.product_images && product.product_images.length > 0) {
+        imageUrl = product.product_images[0].image_url;
+      }
+      if (!imageUrl) {
+        imageUrl = product.image_url;
+      }
+      if (!imageUrl) {
+        imageUrl = '/placeholder.png';
+      }
+      return {
+        id: product.id,
+        name: product.name,
+        description: product.description,
+        price: product.price,
+        originalPrice: product.original_price,
+        category: product.category,
+        imageUrl,
+        featured: product.featured,
+        isNew: product.is_new,
+        onSale: product.on_sale,
+        discount: product.discount,
+        rating: product.rating || 0,
+        createdAt: product.created_at,
+        updatedAt: product.updated_at
+      };
+    });
+  } catch (error) {
+    console.error('Error fetching similar products:', error);
+    return [];
+  }
 }; 
